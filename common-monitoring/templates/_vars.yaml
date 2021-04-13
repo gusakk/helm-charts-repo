@@ -1,0 +1,7 @@
+{{- define "common-monitoring.influxdburl" }}
+{{- if .Values.global.influxdb.url }}
+{{- printf "%s" .Values.global.influxdb.url }}
+{{- else }}
+{{- printf "%s" .Values.influxdb.url }}
+{{- end }}
+{{- end}}

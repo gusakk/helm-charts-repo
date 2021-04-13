@@ -1,0 +1,13 @@
+suite: test statefulset
+templates:
+  - statefulset.yaml
+tests:
+  - it: should work
+    set:
+      persistence.storageClassName: "-"
+    asserts:
+      - isKind:
+          of: StatefulSet
+      - equal:
+          path: spec.volumeClaimTemplates[0].spec.storageClassName
+          value: "storage"

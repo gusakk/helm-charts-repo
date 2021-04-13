@@ -1,0 +1,96 @@
+apiVersion: v1
+entries:
+  chronograf:
+  - apiVersion: v2
+    appVersion: 1.8.9.1
+    created: "2021-04-13T20:51:18.922819069+03:00"
+    dependencies:
+    - name: common-monitoring
+      repository: file://../common-monitoring
+      version: 0.0.1
+    description: Open-source web application written in Go and React.js that provides the tools to visualize your monitoring data and easily create alerting and automation rules.
+    digest: e5bd1853cdfb4d4a466288e331a1c7b41c824905c19f4bb76b1a7d84c9a810e7
+    home: https://www.influxdata.com/time-series-platform/chronograf/
+    keywords:
+    - chronograf
+    - visualizaion
+    - timeseries
+    - influxdata
+    - influxdb
+    name: chronograf
+    urls:
+    - https://gusakk.github.io/helm-charts-repo/chronograf-1.1.24.tgz
+    version: 1.1.24
+  common-monitoring:
+  - apiVersion: v2
+    created: "2021-04-13T20:51:18.923010218+03:00"
+    digest: 7b7ed0fb2aee19aeed5cdfbafc1003adb705b5b20f11d93ba324c4dec6bb52ec
+    name: common-monitoring
+    type: library
+    urls:
+    - https://gusakk.github.io/helm-charts-repo/common-monitoring-0.0.1.tgz
+    version: 0.0.1
+  influxdb:
+  - apiVersion: v2
+    appVersion: 1.8.4
+    created: "2021-04-13T20:51:18.924306716+03:00"
+    description: InfluxDB is a time series database.
+    digest: 28e6b9f68e59a43ace8d5e49be41cd26cfeba0c57e82b68a96f2b5f8e393856a
+    home: https://docs.influxdata.com/influxdb/v1.8/
+    icon: https://influxdata.github.io/branding/img/downloads/influxdata-logo--symbol--pool.svg
+    maintainers:
+    - email: kirills3q@gmail.com
+      name: kirill_gusakov
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    type: application
+    urls:
+    - https://gusakk.github.io/helm-charts-repo/influxdb-0.0.1.tgz
+    version: 0.0.1
+  monitoring:
+  - apiVersion: v2
+    created: "2021-04-13T20:51:18.92641868+03:00"
+    dependencies:
+    - name: influxdb
+      repository: file://../influxdb
+      version: 0.0.1
+    - name: chronograf
+      repository: file://../chronograf
+      version: 1.1.24
+    - name: telegraf
+      repository: file://../telegraf
+      version: 1.7.38
+    description: Monitoring Framework
+    digest: bb1c65988cafe53ad0e47e7a2e8d897828f246393815a43d0a78075e505f588c
+    name: monitoring
+    urls:
+    - https://gusakk.github.io/helm-charts-repo/monitoring-0.0.1.tgz
+    version: 0.0.1
+  telegraf:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2021-04-13T20:51:18.927323874+03:00"
+    dependencies:
+    - name: common-monitoring
+      repository: file://../common-monitoring
+      version: 0.0.1
+    description: Telegraf is an agent written in Go for collecting, processing, aggregating, and writing metrics.
+    digest: 7c20d5fa45bd4defd4b290b0444886eb247f4d36a0b45b59b93e1aa45d4b0adf
+    home: https://www.influxdata.com/time-series-platform/telegraf/
+    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
+    keywords:
+    - telegraf
+    - collector
+    - timeseries
+    - influxdata
+    - influxdb
+    - agent
+    name: telegraf
+    sources:
+    - https://github.com/influxdata/helm-charts/tree/master/charts/telegraf
+    - https://github.com/influxdata/helm-charts/
+    urls:
+    - https://gusakk.github.io/helm-charts-repo/telegraf-1.7.38.tgz
+    version: 1.7.38
+generated: "2021-04-13T20:51:18.921162078+03:00"

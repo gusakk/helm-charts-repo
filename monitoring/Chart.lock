@@ -1,0 +1,12 @@
+dependencies:
+- name: influxdb
+  repository: file://../influxdb
+  version: 0.0.1
+- name: chronograf
+  repository: file://../chronograf
+  version: 1.1.24
+- name: telegraf
+  repository: file://../telegraf
+  version: 1.7.38
+digest: sha256:3d4fc9c5f48e9688c916f1b886321f42d2ca41b21807eff266d0b6fbfc4d9764
+generated: "2021-04-13T20:12:10.283523201+03:00"
